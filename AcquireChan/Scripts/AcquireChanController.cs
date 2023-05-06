@@ -100,8 +100,8 @@ public class AcquireChanController : MonoBehaviour
 			this.transform.rotation = Quaternion.LookRotation( forward );
 		}
 
-		m_Animator.SetBool( "isMove", isMove );
-		m_Animator.SetBool( "isRun", isRun );
+		//m_Animator.SetBool( "isMove", isMove );
+		//m_Animator.SetBool( "isRun", isRun );
 
 
 		// jump

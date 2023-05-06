@@ -49,35 +49,33 @@ public class PlayerShop : MonoBehaviour {
 	
 	GameObject playerPrefab;
 	
-	void Awake(){
-		playerPrefab = Resources.Load<GameObject>("Character prefabs/Player base prefab");
-		
-		if(playerPrefab == null)
-			Debug.LogWarning("No player prefab in resources");
-	}
 	
 	void Start(){
 		//diamonds to unlock all players:
 		//PlayerPrefs.SetInt("Diamonds", 10000);
-		
+		PlayerPrefs.SetInt("Diamonds", 0);
+
+
 		bool doneLoading = false;
-		Vector3 pos = Vector3.zero;
+		Vector3 pos = new Vector3(0,0,-0.25f);
 		
 		//load all characters directly from the resources folder
 		//instantiates one character for each unlockable outfit
 		while(!doneLoading){
-			Outfit next = Resources.Load<Outfit>("Player_" + mannequinCount);
-			
-			if(next != null){
+			playerPrefab = Resources.Load<GameObject>("Character prefabs/Player_" + mannequinCount);
+
+			if (playerPrefab == null)
+            {
+				Debug.LogWarning("No player prefab in resources");
+				return;
+            }
+
+			if (playerPrefab != null){
 				GameObject newMannequin = Instantiate(playerPrefab, pos, playerPrefab.transform.rotation);
 				
 				newMannequin.GetComponent<Animator>().runtimeAnimatorController = idle;
 				newMannequin.GetComponent<Player>().enabled = false;
-				
 				newMannequin.GetComponentInChildren<ParticleSystem>().Stop();
-				
-				newMannequin.GetComponent<ModifyOutfit>().outfit = next;
-				newMannequin.GetComponent<ModifyOutfit>().SetOutfit(false);
 				
 				mannequinCount++;
 			}
@@ -87,7 +85,7 @@ public class PlayerShop : MonoBehaviour {
 			
 			pos += Vector3.right * dist;
 		}
-		
+
 		//get the current player character and move the camera there
 		current = PlayerPrefs.GetInt("Player");
 		UpdateCamera();
@@ -99,6 +97,7 @@ public class PlayerShop : MonoBehaviour {
 	}
 	
 	void Update(){
+
 		//move camera to currently selected character
 		cameraHolder.position = Vector3.MoveTowards(cameraHolder.position, camTarget, Time.deltaTime * transitionSpeed);
 		
@@ -150,9 +149,8 @@ public class PlayerShop : MonoBehaviour {
 	//select character and load game scene
 	public void Select(){
 		PlayerPrefs.SetInt("Player", current);
-		
-		SceneManager.LoadScene(1);
-	}
+		SceneManager.LoadScene("Game scene");
+    }
 	
 	//get new camera target and update ui buttons
 	void UpdateCamera(){
@@ -161,7 +159,7 @@ public class PlayerShop : MonoBehaviour {
 		if(current < characters.Length)
 			nameLabel.text = characters[current].name;
 		
-		bool unlocked = PlayerPrefs.GetInt("Unlocked" + current) == 1 || current < 4;
+		bool unlocked = PlayerPrefs.GetInt("Unlocked" + current) == 1 || current < 2;
 		
 		unlockButton.SetActive(!unlocked);
 		

@@ -1746,17 +1746,17 @@ MonoBehaviour:
   - name: Fearless Felix
     price: 20
   - name: Brave Barbra
-    price: 20
+    price: 100
   - name: Stylish Stuart
-    price: 20
+    price: 100
   - name: Delilah
-    price: 20
+    price: 100
   - name: Brilliant Billy
-    price: 20
+    price: 100
   - name: Fearless Felicia
-    price: 20
+    price: 100
   - name: Lucky Lucas
-    price: 20
+    price: 100
   - name: Classy Claire
     price: 20
   - name: Optimistic Owen
