@@ -25,7 +25,7 @@ public class LoadCharacters : MonoBehaviour {
 	
 	void Awake(){
         //playerPrefab = Resources.Load<GameObject>("Character prefabs/Player base prefab");
-        playerPrefab = Resources.Load<GameObject>("Character prefabs/Player_1");
+        playerPrefab = Resources.Load<GameObject>("Character prefabs/Player_2");
 		opponentPrefab = Resources.Load<GameObject>("Character prefabs/Opponent base prefab");
 		
 		if(playerPrefab == null || opponentPrefab == null){
