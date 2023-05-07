@@ -15,8 +15,10 @@ public class PlayerShop : MonoBehaviour {
 	
 	public Character[] characters;
 	
-	public RuntimeAnimatorController idle;
-	
+	//public RuntimeAnimatorController idle;
+	public RuntimeAnimatorController[] idles;
+
+
 	public Text nameLabel;
 	
 	public float dist;
@@ -48,6 +50,7 @@ public class PlayerShop : MonoBehaviour {
 	int mannequinCount;
 	
 	GameObject playerPrefab;
+
 	
 	
 	void Start(){
@@ -58,10 +61,12 @@ public class PlayerShop : MonoBehaviour {
 
 		bool doneLoading = false;
 		Vector3 pos = new Vector3(0,0,-0.25f);
-		
+
+		int idlingPauseNum = Random.Range(0, idles.Length);
+
 		//load all characters directly from the resources folder
 		//instantiates one character for each unlockable outfit
-		while(!doneLoading){
+		while (!doneLoading){
 			playerPrefab = Resources.Load<GameObject>("Character prefabs/Player_" + mannequinCount);
 
 			if (playerPrefab == null)
@@ -73,7 +78,7 @@ public class PlayerShop : MonoBehaviour {
 			if (playerPrefab != null){
 				GameObject newMannequin = Instantiate(playerPrefab, pos, playerPrefab.transform.rotation);
 				
-				newMannequin.GetComponent<Animator>().runtimeAnimatorController = idle;
+				newMannequin.GetComponent<Animator>().runtimeAnimatorController = idles[idlingPauseNum];
 				newMannequin.GetComponent<Player>().enabled = false;
 				newMannequin.GetComponentInChildren<ParticleSystem>().Stop();
 				

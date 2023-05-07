@@ -1797,7 +1797,13 @@ MonoBehaviour:
     price: 20
   - name: Majestic Max
     price: 20
-  idle: {fileID: 9100000, guid: 9952d73f2be811144b5f14bfab5e6c2a, type: 2}
+  idles:
+  - {fileID: 9100000, guid: 212b3a957fa7bee41a0bf8c3b14ce293, type: 2}
+  - {fileID: 9100000, guid: f846243735c70324cb68814b127a2ffa, type: 2}
+  - {fileID: 9100000, guid: f3428812ad8f55342bb97bb0d45f16c5, type: 2}
+  - {fileID: 9100000, guid: 8d70d6262572c44748cf8239b0f169ac, type: 2}
+  - {fileID: 9100000, guid: 9be7e3285ac97994190585ea7fcf205c, type: 2}
+  - {fileID: 9100000, guid: 10183d0019bbd524192762ce2347c4f9, type: 2}
   nameLabel: {fileID: 1373435495}
   dist: 1.9
   maxDragTime: 1
