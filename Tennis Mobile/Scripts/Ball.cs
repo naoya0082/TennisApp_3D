@@ -45,12 +45,15 @@ public class Ball : MonoBehaviour {
 		if(inactive)
 			return;
 		
-		if(playerHit && transform.position.z > 3.75f){
+		if  ((playerHit && transform.position.z > 3.75f) ||
+			(playerHit && transform.position.z < -3.2f)  ||
+			(playerHit && transform.position.x < -4.7f)  ||
+			(playerHit && transform.position.x > 4.7f))
+		{
 			Out();
-			
 			return;
 		}
-		
+
 		Instantiate(ballEffect, transform.position - Vector3.up * offset, ballEffect.transform.rotation);
 	}
 	

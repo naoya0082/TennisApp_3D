@@ -56,11 +56,9 @@ public class PlayerShop : MonoBehaviour {
 	void Start(){
 		//diamonds to unlock all players:
 		//PlayerPrefs.SetInt("Diamonds", 10000);
-		PlayerPrefs.SetInt("Diamonds", 0);
-
 
 		bool doneLoading = false;
-		Vector3 pos = new Vector3(0,0,-0.25f);
+		Vector3 pos = new Vector3(0,0.1f,-0.25f);
 
 		int idlingPauseNum = Random.Range(0, idles.Length);
 
@@ -72,7 +70,6 @@ public class PlayerShop : MonoBehaviour {
 			if (playerPrefab == null)
             {
 				Debug.LogWarning("No player prefab in resources");
-				return;
             }
 
 			if (playerPrefab != null){

@@ -31,9 +31,10 @@ public class LoadCharacters : MonoBehaviour {
 		PLAYER_3 = 3,
 		PLAYER_4 = 4,
 		PLAYER_5 = 5,
-		PLAYER_6 = 6
+		PLAYER_6 = 6,
+		PLAYER_7 = 7,
 	}
-	
+
 	void Awake(){
 		PLAYER character = (PLAYER)PlayerPrefs.GetInt("Player");
 		switch(character)
@@ -58,6 +59,9 @@ public class LoadCharacters : MonoBehaviour {
 				break;
 			case PLAYER.PLAYER_6:
 				playerPrefab = Resources.Load<GameObject>("Character prefabs/Player_6");
+				break;
+			case PLAYER.PLAYER_7:
+				playerPrefab = Resources.Load<GameObject>("Character prefabs/Player_7");
 				break;
 		}
 		

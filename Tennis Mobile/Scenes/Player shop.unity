@@ -387,7 +387,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 43
+  m_Text: 0
 --- !u!222 &202935379
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -472,7 +472,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 257361706}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0.1, z: 0}
   m_LocalScale: {x: 30, y: 1, z: 30}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1745,58 +1745,20 @@ MonoBehaviour:
   characters:
   - name: Fearless Felix
     price: 20
-  - name: Brave Barbra
+  - name: "\u30AF\u30A8\u30EA\u3061\u3083\u3093"
+    price: 20
+  - name: "\u30AF\u30A8\u30EA\uFF08\u30AF\u30EA\u30B9\u30DE\u30B9\uFF09"
+    price: 20
+  - name: "\u30AF\u30A8\u30EA\uFF08\u30CF\u30ED\u30A6\u30A3\u30F3\uFF09"
+    price: 20
+  - name: "\u30A2\u30AF\u30EF\u30A4\u30A2"
+    price: 50
+  - name: Pico
+    price: 80
+  - name: "\u30E6\u30CB\u30C6\u30A3\u3061\u3083\u3093"
     price: 100
-  - name: Stylish Stuart
-    price: 100
-  - name: Delilah
-    price: 100
-  - name: Brilliant Billy
-    price: 100
-  - name: Fearless Felicia
-    price: 100
-  - name: Lucky Lucas
-    price: 100
-  - name: Classy Claire
-    price: 20
-  - name: Optimistic Owen
-    price: 20
-  - name: Katrina
-    price: 20
-  - name: Positive Peter
-    price: 20
-  - name: Nikki
-    price: 20
-  - name: Joyful Juan
-    price: 20
-  - name: Ms. Smart
-    price: 20
-  - name: Tiger Claw
-    price: 20
-  - name: Xena
-    price: 20
-  - name: Wraith
-    price: 20
-  - name: Lola
-    price: 20
-  - name: T-Money
-    price: 20
-  - name: Ivy
-    price: 20
-  - name: Harley
-    price: 20
-  - name: Athena
-    price: 20
-  - name: Mad Dog
-    price: 20
-  - name: Wild Cat
-    price: 20
-  - name: Mr. Smart
-    price: 20
-  - name: Raven
-    price: 20
-  - name: Majestic Max
-    price: 20
+  - name: "\u30DC\u30FC\u30F3\u5927\u5C06\u8ECD"
+    price: 500
   idles:
   - {fileID: 9100000, guid: 212b3a957fa7bee41a0bf8c3b14ce293, type: 2}
   - {fileID: 9100000, guid: f846243735c70324cb68814b127a2ffa, type: 2}
@@ -2311,7 +2273,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1708066945
 RectTransform:
   m_ObjectHideFlags: 0

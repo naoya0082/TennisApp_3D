@@ -86,7 +86,8 @@ public class GameManager : MonoBehaviour {
 	
 	void Awake(){		
 		canvas.SetActive(true);
-	}
+		//PlayerPrefs.DeleteAll();
+    }
 	
 	void Start(){
 		//initialize colors, player, confetti and audio
@@ -96,22 +97,18 @@ public class GameManager : MonoBehaviour {
 		
 		SetColorScheme();
 
-		if(SceneManager.GetActiveScene().name != "Menu")
-        {
-			player.SetBar(true);
-			if (bonus)
-			{
-				diamondsLabel.gameObject.SetActive(false);
-			}
-			else
-			{
-				characterAvailableIcon.SetActive(PlayerPrefs.GetInt("Diamonds") >= 20);
-			}
-		}
+		player.SetBar(true);
 
 		SetAudio(false);
-		
-		
+
+		if (bonus)
+		{
+			diamondsLabel.gameObject.SetActive(false);
+		}
+		else
+		{
+			characterAvailableIcon.SetActive(PlayerPrefs.GetInt("Diamonds") >= 100);
+		}
 	}
 	
 	void SetColorScheme(){
@@ -312,9 +309,9 @@ public class GameManager : MonoBehaviour {
 		
 		yield return new WaitForSeconds(1f/4f);
 
-		//SceneManager.LoadScene(0);
-		this.CharacterSelection();
-	}
+		SceneManager.LoadScene("Player shop");
+        //this.CharacterSelection();
+    }
 	
 	//opponent serves first hit
 	IEnumerator OpponentServe(){

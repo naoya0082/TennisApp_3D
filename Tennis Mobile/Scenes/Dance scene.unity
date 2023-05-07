@@ -2417,7 +2417,7 @@ Camera:
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 567
+    m_Bits: 2147483647
   m_RenderingPath: -1
   m_TargetTexture: {fileID: 0}
   m_TargetDisplay: 0
@@ -10711,7 +10711,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerPosition: {fileID: 1533768151}
   opponentPosition: {fileID: 536141376}
-  danceController: {fileID: 9100000, guid: 9bb19cc94f59f4e47afe3b3f98d00c41, type: 2}
+  playerDance: {fileID: 9100000, guid: 212b3a957fa7bee41a0bf8c3b14ce293, type: 2}
+  opponentDance: {fileID: 9100000, guid: 10183d0019bbd524192762ce2347c4f9, type: 2}
 --- !u!1 &1506008016
 GameObject:
   m_ObjectHideFlags: 0

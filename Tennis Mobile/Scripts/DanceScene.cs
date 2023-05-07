@@ -79,7 +79,7 @@ public class DanceScene : MonoBehaviour {
 		TryAd();
 		#endif
 		
-		playerPrefab = Resources.Load<GameObject>("Character prefabs/Player base prefab");
+		playerPrefab = Resources.Load<GameObject>("Character prefabs/Player_3");
 		opponentPrefab = Resources.Load<GameObject>("Character prefabs/Opponent base prefab");
 		
 		if(playerPrefab == null || opponentPrefab == null){
@@ -113,9 +113,11 @@ public class DanceScene : MonoBehaviour {
 			
 			title.text = "Winner";
 			
-			player.SetInteger("Type", Random.Range(1, 8));
-			
-			int tournament = PlayerPrefs.GetInt("Tournament");
+			//player.SetInteger("Type", Random.Range(1, 8));
+
+			Debug.Log("-----");
+
+            int tournament = PlayerPrefs.GetInt("Tournament");
 			int tournamentMatch = PlayerPrefs.GetInt("Tournament Match Number");
 			
 			if(tournamentMatch == 0)
