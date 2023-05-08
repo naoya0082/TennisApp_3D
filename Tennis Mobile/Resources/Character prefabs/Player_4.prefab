@@ -2306,7 +2306,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 8
-  turnSpeed: 3.31
+  turnSpeed: 7
   ballRange: 4
   force: 14.5
   upForce: 8

@@ -171,7 +171,7 @@ public class GameManager : MonoBehaviour {
 	//with a fire ball, always win a point (and shake the camera for a nice effect)
 	public void FireBall(){
 		WinPoint();
-		
+
 		StartCoroutine(cameraMovement.Shake(0.2f, 1.2f));
 	}
 	

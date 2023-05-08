@@ -27,6 +27,9 @@ public class Ball : MonoBehaviour {
 		//pause the circle indicator whenever the ball floats in a fixed position
         if(circle.GetBool("Paused") != rb.isKinematic)
 			circle.SetBool("Paused", rb.isKinematic);
+
+		if (transform.position.y < -10)
+			Destroy(this.gameObject);
     }
 	
 	//on collision, check what we hit and show an effect on the ground
@@ -46,9 +49,9 @@ public class Ball : MonoBehaviour {
 			return;
 		
 		if  ((playerHit && transform.position.z > 3.75f) ||
-			(playerHit && transform.position.z < -3.2f)  ||
-			(playerHit && transform.position.x < -4.7f)  ||
-			(playerHit && transform.position.x > 4.7f))
+			(playerHit && transform.position.z < -3.37f)  ||
+			(playerHit && transform.position.x < -4.95f)  ||
+			(playerHit && transform.position.x > 4.95f))
 		{
 			Out();
 			return;

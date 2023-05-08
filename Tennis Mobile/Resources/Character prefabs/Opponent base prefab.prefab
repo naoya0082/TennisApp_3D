@@ -5404,8 +5404,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c362c68ebfc5a3f43b0c5fa4f70c8c4f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 6
-  turnSpeed: 6
+  speed: 7
+  turnSpeed: 7
   anim: {fileID: 3609163562085621909}
   head: {fileID: 3609163562094907205}
   lookAt: {fileID: 0}
