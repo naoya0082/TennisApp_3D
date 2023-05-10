@@ -16025,7 +16025,7 @@ GameObject:
   - component: {fileID: 6109235375518729863}
   m_Layer: 0
   m_Name: Player_5
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -16127,6 +16127,7 @@ MonoBehaviour:
   maxDragTime: 1.7
   dragDistance: 40
   swipeSensitivity: 0.08
+  defUpForce: 0
 --- !u!114 &6109235375518729913
 MonoBehaviour:
   m_ObjectHideFlags: 0

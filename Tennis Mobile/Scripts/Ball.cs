@@ -16,11 +16,19 @@ public class Ball : MonoBehaviour {
 	
 	[HideInInspector]
 	public bool inactive;
-	
+
+	[HideInInspector]
+	public Player player;
+
 	bool playerHit;
 	
     void Start(){
 		flames.SetActive(false);
+		GameObject playerObj = GameObject.FindGameObjectWithTag("Player");
+        if (playerObj)
+        {
+			player = playerObj.GetComponent<Player>();
+        }
     }
 
     void Update(){
@@ -34,10 +42,12 @@ public class Ball : MonoBehaviour {
 	
 	//on collision, check what we hit and show an effect on the ground
 	void OnCollisionEnter(Collision other){
-		if(!other.gameObject.CompareTag("Ground"))
+		if (!other.gameObject.CompareTag("Ground"))
 			return;
-		
-		if(flames.activeSelf){
+
+        player.upForce = player.defUpForce;
+
+		if (flames.activeSelf){
 			Instantiate(brokenFloor, transform.position - Vector3.up * offset * 4, brokenFloor.transform.rotation);
 			
 			GameObject.FindObjectOfType<GameManager>().FireBall();
@@ -45,8 +55,9 @@ public class Ball : MonoBehaviour {
 			Destroy(gameObject);
 		}
 		
-		if(inactive)
-			return;
+		if(inactive) return;
+
+		Debug.Log(this.transform.position);
 		
 		if  ((playerHit && transform.position.z > 3.75f) ||
 			(playerHit && transform.position.z < -3.37f)  ||

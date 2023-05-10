@@ -97,13 +97,17 @@ public class Player : MonoBehaviour {
 	float rotation;
 	
 	bool shoot = true;
+
+	public float defUpForce;
 	
+
 	GameManager manager;
 	
     void Start(){
 		//initialize the manager, game panel, range, power bar and particles
 		manager = GameObject.FindObjectOfType<GameManager>();
-		
+		defUpForce = this.upForce;
+
 		gamePanel.SetActive(false);
 		
         rangeCircle.SetBool("Show", false);
@@ -242,6 +246,7 @@ public class Player : MonoBehaviour {
 	
 	//checks for swipe motion to see if we want to shoot the ball
 	void Shoot(){
+		
 		Vector3 currentPos = Input.mousePosition;
 		
 		if(Input.GetMouseButtonDown(0) && shoot){	

@@ -80,7 +80,7 @@ public class GameManager : MonoBehaviour {
 	
 	bool resetting;
 	bool playerServe;
-	
+
 	[HideInInspector]
 	public int bonusDiamonds;
 	
@@ -90,6 +90,7 @@ public class GameManager : MonoBehaviour {
     }
 	
 	void Start(){
+		
 		//initialize colors, player, confetti and audio
 		foreach(GameObject conf in confetti){
 			conf.SetActive(false);
@@ -139,10 +140,13 @@ public class GameManager : MonoBehaviour {
 	}
 	
 	//create and assign a new ball
-	public void Serve(){		
+	public void Serve(){
 		GameObject newBall = Instantiate(ball, spawnPos.position, ball.transform.rotation);
-		
-		player.ball = newBall.transform;
+
+		player.upForce = 0; // キャラクターごとに設定する?
+
+
+        player.ball = newBall.transform;
 		opponent.ball = newBall.transform;
 		
 		ballScript = newBall.GetComponent<Ball>();
@@ -277,6 +281,7 @@ public class GameManager : MonoBehaviour {
 		if(!playerServeOnly){
 			if(playerServe){
 				player.SetBar(true);
+				
 			}
 			else{
 				StartCoroutine(OpponentServe());

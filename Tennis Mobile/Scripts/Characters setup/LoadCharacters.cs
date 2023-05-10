@@ -105,7 +105,6 @@ public class LoadCharacters : MonoBehaviour {
 			AssignPlayerReferences(player);
 		}
 
-		Debug.Log(PlayerPrefs.GetInt("Player"));
 	}
 	
 	void AssignPlayerReferences(Player player){
