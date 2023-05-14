@@ -11456,7 +11456,7 @@ GameObject:
   - component: {fileID: 219190241}
   m_Layer: 0
   m_Name: Stadium (1)
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -38962,7 +38962,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1261400443
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -79532,7 +79532,7 @@ Transform:
   m_GameObject: {fileID: 3022226474235810449}
   m_LocalRotation: {x: -0, y: 0.7071068, z: -0, w: 0.7071068}
   m_LocalPosition: {x: -0.95000005, y: 3.5794938, z: 1.5768877}
-  m_LocalScale: {x: 0.080000035, y: 0.1, z: 14.250008}
+  m_LocalScale: {x: 0.080000035, y: 0.15, z: 14.250008}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 3800471647615866874}

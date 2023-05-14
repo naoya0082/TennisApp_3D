@@ -113,9 +113,8 @@ public class DanceScene : MonoBehaviour {
 			
 			title.text = "Winner";
 			
-			//player.SetInteger("Type", Random.Range(1, 8));
-
-			Debug.Log("-----");
+			//player.SetInteger("Type", Random.Range(1, 8))
+			//Debug.Log("-----");
 
             int tournament = PlayerPrefs.GetInt("Tournament");
 			int tournamentMatch = PlayerPrefs.GetInt("Tournament Match Number");

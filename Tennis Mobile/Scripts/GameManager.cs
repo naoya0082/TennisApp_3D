@@ -143,10 +143,15 @@ public class GameManager : MonoBehaviour {
 	public void Serve(){
 		GameObject newBall = Instantiate(ball, spawnPos.position, ball.transform.rotation);
 
-		player.upForce = 0; // キャラクターごとに設定する?
+        if (player.force >= 10 && player.force < 12)		player.upForce = 6;
+		else if (player.force >= 12 && player.force < 14)	player.upForce = 5;
+		else if (player.force >= 14 && player.force < 16)	player.upForce = 4;
+		else if (player.force >= 16 && player.force < 18)	player.upForce = 3;
+		else if (player.force >= 18 && player.force < 20)	player.upForce = 2;
+		else if (player.force >= 20 && player.force < 22)	player.upForce = 1;
+		else if (player.force >= 22)						player.upForce = 0;
 
-
-        player.ball = newBall.transform;
+		player.ball = newBall.transform;
 		opponent.ball = newBall.transform;
 		
 		ballScript = newBall.GetComponent<Ball>();

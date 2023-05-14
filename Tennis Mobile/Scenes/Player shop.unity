@@ -1743,22 +1743,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   characters:
-  - name: Fearless Felix
+  - name: "\u30D5\u30A7\u30EA\u30C3\u30AF\u30B9"
     price: 20
-  - name: "\u30AF\u30A8\u30EA\u3061\u3083\u3093"
+  - name: "\u30AF\u30A8\u30EA\u3061\u3083\u3093 Lv.1"
     price: 20
-  - name: "\u30AF\u30A8\u30EA\uFF08\u30AF\u30EA\u30B9\u30DE\u30B9\uFF09"
+  - name: "\u30AF\u30A8\u30EA\u3061\u3083\u3093 Lv.2"
     price: 20
-  - name: "\u30AF\u30A8\u30EA\uFF08\u30CF\u30ED\u30A6\u30A3\u30F3\uFF09"
+  - name: "\u30AF\u30A8\u30EA\u3061\u3083\u3093 Lv.3"
     price: 20
-  - name: "\u30A2\u30AF\u30EF\u30A4\u30A2"
+  - name: "\u30A2\u30AF\u30A2\u3061\u3083\u3093"
     price: 50
-  - name: Pico
+  - name: "Pico\u3061\u3083\u3093"
     price: 80
   - name: "\u30E6\u30CB\u30C6\u30A3\u3061\u3083\u3093"
     price: 100
   - name: "\u30DC\u30FC\u30F3\u5927\u5C06\u8ECD"
-    price: 500
+    price: 300
   idles:
   - {fileID: 9100000, guid: 212b3a957fa7bee41a0bf8c3b14ce293, type: 2}
   - {fileID: 9100000, guid: f846243735c70324cb68814b127a2ffa, type: 2}

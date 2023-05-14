@@ -51,17 +51,14 @@ public class Ball : MonoBehaviour {
 			Instantiate(brokenFloor, transform.position - Vector3.up * offset * 4, brokenFloor.transform.rotation);
 			
 			GameObject.FindObjectOfType<GameManager>().FireBall();
-			
 			Destroy(gameObject);
 		}
 		
 		if(inactive) return;
-
-		Debug.Log(this.transform.position);
 		
 		if  ((playerHit && transform.position.z > 3.75f) ||
-			(playerHit && transform.position.z < -3.37f)  ||
-			(playerHit && transform.position.x < -4.95f)  ||
+			(playerHit && transform.position.z < -3.35f) ||
+			(playerHit && transform.position.x < -4.95f) ||
 			(playerHit && transform.position.x > 4.95f))
 		{
 			Out();
