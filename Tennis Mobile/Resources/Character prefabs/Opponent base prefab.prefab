@@ -5404,7 +5404,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c362c68ebfc5a3f43b0c5fa4f70c8c4f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 7
+  speed: 6.8
   turnSpeed: 7
   anim: {fileID: 3609163562085621909}
   head: {fileID: 3609163562094907205}
@@ -5412,8 +5412,8 @@ MonoBehaviour:
   moveParticles: {fileID: 3609163561518604184}
   ball: {fileID: 0}
   arrow: {fileID: 3609163562158081398}
-  force: 12
-  upForce: 8
+  force: 14
+  upForce: 7.5
   player: {fileID: 0}
   moveRange: 4.3
   servePoint: {fileID: 3609163562779950125}

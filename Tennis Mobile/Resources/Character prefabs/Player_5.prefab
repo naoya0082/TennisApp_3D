@@ -16088,8 +16088,8 @@ MonoBehaviour:
   speed: 10
   turnSpeed: 7
   ballRange: 4
-  force: 15
-  upForce: 7
+  force: 18
+  upForce: 6.5
   moveRange: 4.3
   powerbarSpeedMin: 4
   powerbarSpeedMax: 4.5

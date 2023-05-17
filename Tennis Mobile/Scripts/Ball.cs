@@ -42,10 +42,11 @@ public class Ball : MonoBehaviour {
 	
 	//on collision, check what we hit and show an effect on the ground
 	void OnCollisionEnter(Collision other){
+
+		player.upForce = player.defUpForce;
+
 		if (!other.gameObject.CompareTag("Ground"))
 			return;
-
-        player.upForce = player.defUpForce;
 
 		if (flames.activeSelf){
 			Instantiate(brokenFloor, transform.position - Vector3.up * offset * 4, brokenFloor.transform.rotation);
@@ -65,7 +66,7 @@ public class Ball : MonoBehaviour {
 			return;
 		}
 
-		Instantiate(ballEffect, transform.position - Vector3.up * offset, ballEffect.transform.rotation);
+		//Instantiate(ballEffect, transform.position - Vector3.up * offset, ballEffect.transform.rotation);
 	}
 	
 	//set the last hit to player/opponent (to remember who hit the ball when the ball is out)

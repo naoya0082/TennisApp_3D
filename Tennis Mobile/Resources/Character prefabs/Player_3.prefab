@@ -823,10 +823,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 32859dc90988ede48a3b7baa89014de7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 5
+  speed: 8
   turnSpeed: 6
   ballRange: 4
-  force: 14
+  force: 15
   upForce: 8
   moveRange: 4.3
   powerbarSpeedMin: 4
