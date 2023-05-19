@@ -83,10 +83,14 @@ public class GameManager : MonoBehaviour {
 
 	[HideInInspector]
 	public int bonusDiamonds;
+
+	string activeScene;
 	
 	void Awake(){		
 		canvas.SetActive(true);
 		//PlayerPrefs.DeleteAll();
+
+		activeScene = SceneManager.GetActiveScene().name;
     }
 	
 	void Start(){
@@ -98,17 +102,14 @@ public class GameManager : MonoBehaviour {
 		
 		SetColorScheme();
 
-		player.SetBar(true);
+		if (activeScene != "Menu")
+			player.SetBar(true);
 
 		SetAudio(false);
 
 		if (bonus)
 		{
 			diamondsLabel.gameObject.SetActive(false);
-		}
-		else
-		{
-			characterAvailableIcon.SetActive(PlayerPrefs.GetInt("Diamonds") >= 100);
 		}
 	}
 	
