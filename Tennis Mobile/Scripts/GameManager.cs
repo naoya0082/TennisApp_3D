@@ -85,6 +85,8 @@ public class GameManager : MonoBehaviour {
 	public int bonusDiamonds;
 
 	string activeScene;
+
+	public GameObject adMobInterstitial;
 	
 	void Awake(){		
 		canvas.SetActive(true);
@@ -94,9 +96,9 @@ public class GameManager : MonoBehaviour {
     }
 	
 	void Start(){
-		
+
 		//initialize colors, player, confetti and audio
-		foreach(GameObject conf in confetti){
+		foreach (GameObject conf in confetti){
 			conf.SetActive(false);
 		}
 		
@@ -320,8 +322,15 @@ public class GameManager : MonoBehaviour {
 		
 		yield return new WaitForSeconds(1f/4f);
 
+		//---ここにインタースティシャル広告を導入---
+		if (adMobInterstitial)
+        {
+			adMobInterstitial.GetComponent<AdMobInterstitial>().ShowAd();
+        }
+		//------------------------------------
+		
 		SceneManager.LoadScene("Player shop");
-        //this.CharacterSelection();
+      
     }
 	
 	//opponent serves first hit
