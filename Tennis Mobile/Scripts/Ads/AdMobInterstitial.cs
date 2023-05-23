@@ -12,15 +12,15 @@ public class AdMobInterstitial : MonoBehaviour
         MobileAds.Initialize((InitializationStatus initStatus) =>
         {
             // このコールバックは、MobileAds SDK が初期化されると呼び出されます。
-            this.LoadInterstitialAd();
         });
+        this.LoadInterstitialAd();
     }
 
 
     // これらの広告ユニットは、常にテスト広告を配信するように設定されています。
 #if UNITY_ANDROID
     private string _adUnitId = "ca-app-pub-3940256099942544/1033173712";      // テスト広告
-    //private string _adUnitId = "ca-app-pub-8673262984895359~3819444368";      // リリース用広告
+    //private string _adUnitId = "ca-app-pub-8673262984895359/6284975545";      // リリース用広告
 
 #elif UNITY_IPHONE
     private string _adUnitId = "ca-app-pub-3940256099942544/4411468910";      // テスト広告
@@ -116,8 +116,6 @@ public class AdMobInterstitial : MonoBehaviour
         ad.OnAdFullScreenContentClosed += () =>
         {
             Debug.Log("Interstitial ad full screen content closed.");
-
-
         };
         // 広告がフルスクリーン コンテンツを開くことができなかった場合に発生します。
         ad.OnAdFullScreenContentFailed += (AdError error) =>
