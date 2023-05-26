@@ -92,7 +92,7 @@ public class GameManager : MonoBehaviour {
 		canvas.SetActive(true);
 		//PlayerPrefs.DeleteAll();
 
-		activeScene = SceneManager.GetActiveScene().name;
+        activeScene = SceneManager.GetActiveScene().name;
     }
 	
 	void Start(){
@@ -329,7 +329,7 @@ public class GameManager : MonoBehaviour {
         }
 		//------------------------------------
 		
-		SceneManager.LoadScene("Player shop");
+		//SceneManager.LoadScene("Player shop");
       
     }
 	

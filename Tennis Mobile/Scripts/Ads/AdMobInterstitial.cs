@@ -3,6 +3,7 @@ using GoogleMobileAds;
 using GoogleMobileAds.Api;
 using System;
 using UnityEngine.Events;
+using UnityEngine.SceneManagement;
 
 public class AdMobInterstitial : MonoBehaviour
 {
@@ -24,7 +25,7 @@ public class AdMobInterstitial : MonoBehaviour
 
 #elif UNITY_IPHONE
     private string _adUnitId = "ca-app-pub-3940256099942544/4411468910";      // テスト広告
-    //private string _adUnitId = "ca-app-pub-8673262984895359~9037425102";      // リリース用広告
+    //private string _adUnitId = "ca-app-pub-8673262984895359/5929057797";      // リリース用広告
 
 #else
   private string _adUnitId = "unused";
@@ -80,6 +81,8 @@ public class AdMobInterstitial : MonoBehaviour
         {
             Debug.Log("Showing interstitial ad.");
             interstitialAd.Show();
+
+            this.RegisterEventHandlers(interstitialAd);
         }
         else
         {
@@ -115,6 +118,7 @@ public class AdMobInterstitial : MonoBehaviour
         // 広告がフルスクリーン コンテンツを閉じたときに発生します。
         ad.OnAdFullScreenContentClosed += () =>
         {
+            SceneManager.LoadScene("Player shop");
             Debug.Log("Interstitial ad full screen content closed.");
         };
         // 広告がフルスクリーン コンテンツを開くことができなかった場合に発生します。

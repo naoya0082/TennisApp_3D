@@ -7,11 +7,11 @@ public class AdMobReward : MonoBehaviour
     // These ad units are configured to always serve test ads.
 #if UNITY_ANDROID
     private string _adUnitId = "ca-app-pub-3940256099942544/5224354917";
-    //private string _adUnitId = "";
+    //private string _adUnitId = "ca-app-pub-8673262984895359/9362650742";
 
 #elif UNITY_IPHONE
     private string _adUnitId = "ca-app-pub-3940256099942544/1712485313";
-    //private string _adUnitId = "";
+    //private string _adUnitId = "ca-app-pub-8673262984895359/8363649448";
 
 #else
   private string _adUnitId = "unused";
@@ -82,7 +82,6 @@ public class AdMobReward : MonoBehaviour
             this.RegisterEventHandlers(rewardedAd);
         }
 
-        LoadRewardedAd();
     }
 
     private void RegisterEventHandlers(RewardedAd ad)
@@ -112,6 +111,8 @@ public class AdMobReward : MonoBehaviour
         // Raised when the ad closed full screen content.
         ad.OnAdFullScreenContentClosed += () =>
         {
+            Debug.Log("Rewarded ad full screen content closed");
+
             //Panelを閉じる
             confirmPanel.SetActive(false);
             getRewardPanel.SetActive(true);
@@ -119,7 +120,9 @@ public class AdMobReward : MonoBehaviour
             // ダイヤを10個プラスする
             PlayerPrefs.SetInt("Diamonds", PlayerPrefs.GetInt("Diamonds") + 10);
 
-            Debug.Log("Rewarded ad full screen content closed 広告を閉じました");
+            //広告再生回数を精算
+            PlayerPrefs.SetInt("adPlayCount", PlayerPrefs.GetInt("adPlayCount") + 1);
+            LoadRewardedAd();
         };
         // Raised when the ad failed to open full screen content.
         ad.OnAdFullScreenContentFailed += (AdError error) =>
