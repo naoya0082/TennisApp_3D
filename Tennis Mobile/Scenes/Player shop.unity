@@ -1962,7 +1962,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 8d617afa3561c5a4b9993229bd994b2f, type: 3}
+    m_Font: {fileID: 12800000, guid: 919c431785632404c98828df0fefc9cb, type: 3}
     m_FontSize: 14
     m_FontStyle: 0
     m_BestFit: 1
@@ -2745,7 +2745,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 8d617afa3561c5a4b9993229bd994b2f, type: 3}
+    m_Font: {fileID: 12800000, guid: 919c431785632404c98828df0fefc9cb, type: 3}
     m_FontSize: 14
     m_FontStyle: 0
     m_BestFit: 1
@@ -3067,12 +3067,12 @@ MonoBehaviour:
     price: 20
   - name: "\u30AF\u30A8\u30EA\u3061\u3083\u3093 Lv.3"
     price: 20
-  - name: "\u30A2\u30AF\u30A2\u3061\u3083\u3093"
+  - name: "\u30B4\u30B9\u30ED\u30EA\u3061\u3083\u3093"
     price: 50
   - name: "Pico\u3061\u3083\u3093"
     price: 80
   - name: "\u30E6\u30CB\u30C6\u30A3\u3061\u3083\u3093"
-    price: 100
+    price: 120
   - name: "\u30DC\u30FC\u30F3\u5927\u5C06\u8ECD"
     price: 300
   idles:

@@ -204,6 +204,9 @@ public class GameManager : MonoBehaviour {
 	void WinPoint(){
 		playerPoints++;
 		
+		if (playerPoints > pointsToWin)
+			playerPoints = pointsToWin;
+
 		if(!resetting)
 			StartCoroutine(CheckAndReset(true));
 	}
